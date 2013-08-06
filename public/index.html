@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<title>Seneca Blog</title>
+<link rel="stylesheet" href="blog.css" >
+<script src="underscore-1.4.4.min.js"></script>
+<script src="jquery-2.0.3.min.js"></script>
+<script src="blog-client.js"></script>
+</head>
+<body>
+<h1>Seneca Blog</h1>
+
+
+<p>
+  <a class="btn auth hide" id="nav_new">new</a> <a class="btn" id="nav_list">list</a>
+  <a class="btn" id="nav_login">login</a>   <a class="btn auth hide" id="nav_logout">logout</a>
+</p>
+
+
+<div id="hello" class="hide">
+Hello <span id="user_name"></span>
+</div>
+
+
+<div id="edit" class="content hide">
+
+  <form id="edit_form">
+    <input id="edit_id" type="hidden">
+
+    <p>
+      <a class="btn" id="edit_back">back</a>
+    </p>
+
+    <p>
+      <label>Title</label><br>
+      <input id="edit_title" type="text">
+    </p>
+
+    <p>
+      <label>Text</label><br>
+      <textarea id="edit_text"></textarea>
+    </p>
+
+    <input type="submit">
+
+  </form>
+
+</div>
+
+
+<div id="view" class="content hide">
+
+  <p>
+    <a class="btn" id="view_back">back</a> <a class="btn auth hide" id="view_edit">edit</a>
+  </p>
+
+  <p>
+    <strong>Title:</strong>
+    <span id="view_title"></span>
+  </p>
+  <p>
+    <strong>Text:</strong>
+    <span id="view_text"></span>
+  </p>
+
+</div>
+
+
+<div id="comment" class="content hide">
+  <form id="comment_form">
+    <p>
+      <label>Commenter</label><br>
+      <input id="comment_commenter" type="text">
+    </p>
+    <p>
+      <label>Body</label><br>
+      <textarea id="comment_body"></textarea>
+    </p>
+    <input type="submit">
+  </form>
+</div>
+
+
+<ul id="comment_list" class="content hide">
+  <li>
+    <b class="commenter"></b>
+    <p class="body"></p>
+    <a class="btn auth hide delete">delete</a>
+  </li>
+</ul>
+
+
+<ul id="list" class="content hide">
+  <li><a class="title"></a> <a class="btn auth hide edit">edit</a> <a class="btn auth hide delete">delete</a></li>
+</ul>
+
+
+
+<div id="login" class="content hide">
+
+<h1>Login</h1>
+<form id="login" action="/auth/login" method="post">
+
+<p>
+<label for="username">Username:</label><br />
+<input id="username" name="username" />
+</p>
+
+<p>
+<label for="username">Password:</label><br />
+<input type="password" id="password" name="password" />
+</p>
+
+<p>
+<input type="submit">
+</p>
+</form>
+
+
+</body>
+</html>

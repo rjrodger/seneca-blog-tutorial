@@ -1,0 +1,15 @@
+
+.hide {
+  display: none;
+}
+
+a.btn {
+    border: 1px solid #666;
+    background-color:#ccc;
+    padding:2px;
+    margin: 4px;
+}
+
+li {
+    margin:8px;
+}
