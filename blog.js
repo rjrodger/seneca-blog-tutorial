@@ -48,14 +48,18 @@ module.exports = function( options ) {
 
 
   seneca.add({init:name}, function( args, done ){
-    seneca.act('role:util, cmd:define_sys_entity', 
+    seneca.act('role:basic, cmd:define_sys_entity',
                {list:[ 'post', 'comment' ]})
 
-    seneca.act('role:user,cmd:register,name:U1,nick:u1,pass:u1')
+    seneca.act('role:user,cmd:register,name:U1,nick:u1,pass:u1', function (err, result) {
+
+      if(err) console.error('Something Bad happened created the user')
+      else console.log('Just created an User u1');
+
+      done()
+    })
   })
 
 
-  return {
-    name:name
-  }
+  return name;
 }

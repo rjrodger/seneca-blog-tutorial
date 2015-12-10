@@ -4,6 +4,7 @@
   "description": "A Seneca tutorial that builds a Blog",
   "main": "blog-app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,10 +16,13 @@
   "readmeFilename": "README.md",
   "gitHead": "738beba040dec098315aca97ad5cdccf31c0dff8",
   "dependencies": {
-    "seneca": "~0.5.9",
-    "seneca-jsonrest-api": "~0.1.2",
-    "seneca-data-editor": "~0.1.2",
     "express": "~3.3.4",
-    "optimist": "~0.6.0"
+    "optimist": "~0.6.0",
+    "seneca": "~0.9.1",
+    "seneca-auth": "^0.4.0",
+    "seneca-data-editor": "~0.2.0",
+    "seneca-jsonrest-api": "~0.3.1",
+    "seneca-perm": "^0.5.6",
+    "seneca-user": "^0.2.10"
   }
 }
