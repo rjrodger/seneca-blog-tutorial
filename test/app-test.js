@@ -1,16 +1,16 @@
-const Code = require('code');
-const Lab = require('lab');
-const request = require('supertest')
+var Code = require('code');
+var Lab = require('lab');
+var request = require('supertest')
 
-const lab = exports.lab = Lab.script();
+var lab = exports.lab = Lab.script();
 
-const describe = lab.describe;
-const it = lab.it;
-const beforeEach = lab.beforeEach;
-const afterEach = lab.afterEach;
-const expect = Code.expect;
+var describe = lab.describe;
+var it = lab.it;
+var beforeEach = lab.beforeEach;
+var afterEach = lab.afterEach;
+var expect = Code.expect;
 
-const serverPath = '../server';
+var serverPath = '../server';
 
 
 describe('Server', function () {
