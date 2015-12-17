@@ -1,5 +1,11 @@
 "use strict";
 
+var serveStatic = require('serve-static')
+var favicon = require('serve-favicon')
+var cookieParser = require('cookie-parser')
+var bodyParser = require('body-parser')
+var methodOverride = require('method-override')
+
 function appBuilder() {
   var express = require('express')
 
@@ -25,17 +31,16 @@ function appBuilder() {
 
 
   var app = express()
-//app.use( express.logger() )
-  app.use(express.favicon())
-  app.use(express.cookieParser())
-  app.use(express.query())
-  app.use(express.bodyParser())
-  app.use(express.methodOverride())
-  app.use(express.json())
+      //.use(favicon())
+      .use(cookieParser())
+      .use(express.query())
+      .use(bodyParser())
+      .use(methodOverride())
+      .use(bodyParser.json())
 
-  app.use(seneca.export('web'))
+      .use(seneca.export('web'))
 
-  app.use(express.static(__dirname + '/public'))
+      .use(serveStatic(__dirname + '/public'))
 
   return app;
 }

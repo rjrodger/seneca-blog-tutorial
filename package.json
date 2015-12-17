@@ -16,7 +16,7 @@
   "readmeFilename": "README.md",
   "gitHead": "738beba040dec098315aca97ad5cdccf31c0dff8",
   "dependencies": {
-    "express": "~3.3.4",
+    "express": "~4.13.3",
     "optimist": "~0.6.0",
     "seneca": "~0.9.1",
     "seneca-auth": "^0.4.0",
