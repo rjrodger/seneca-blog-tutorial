@@ -17,14 +17,19 @@
   "readmeFilename": "README.md",
   "gitHead": "738beba040dec098315aca97ad5cdccf31c0dff8",
   "dependencies": {
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.0",
     "express": "~4.13.3",
+    "method-override": "^2.3.5",
     "optimist": "~0.6.0",
     "seneca": "~0.9.1",
     "seneca-auth": "^0.4.0",
     "seneca-data-editor": "~0.2.0",
     "seneca-jsonrest-api": "~0.3.1",
     "seneca-perm": "^0.5.6",
-    "seneca-user": "^0.2.10"
+    "seneca-user": "^0.2.10",
+    "serve-favicon": "^2.3.0",
+    "serve-static": "^1.10.0"
   },
   "devDependencies": {
     "code": "^2.0.1",
