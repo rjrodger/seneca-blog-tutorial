@@ -15,8 +15,8 @@ module.exports = function( options ) {
 
 
   seneca.add({role:'entity',cmd:'remove',name:'post'},removePostComments)
-    .add({role:'entity',cmd:'save',name:'comment'}, setCommentOwner())
-    .add({role:'user',cmd:'register'},addPermisionToRegisteredUser)
+    .add({role:'entity',cmd:'save',name:'comment'}, setCommentOwner)
+    .add({role:'user',cmd:'register'}, addPermisionToRegisteredUser)
     .add({init:name}, blogPluginInit)
 
 

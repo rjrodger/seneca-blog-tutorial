@@ -7,7 +7,7 @@ const describe = lab.describe;
 const it = lab.it;
 const expect = Code.expect;
 
-const serverPath = '../server'
+const serverPath = '../server';
 
 
 describe('Server', function () {
@@ -20,14 +20,17 @@ describe('Server', function () {
 
     it('can be started and stop', function (done) {
       var server = require(serverPath)();
-      server.listen(function () {
-        server.close(done)
+      server.listen(function (err) {
+        expect(err).to.not.exists();
+
+        server.close(done);
+
       })
     })
 
 })
 
 
-describe('Main routes are working', function(){
+describe('Main routes are working', function () {
 
 })
