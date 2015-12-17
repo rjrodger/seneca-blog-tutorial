@@ -5,7 +5,8 @@
   "main": "blog-app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "lab -v -a code"
+    "test": "lab -v -a code",
+    "cover": "lab -c -l -r lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "code": "^2.0.1",
+    "coveralls": "^2.11.6",
     "lab": "^8.0.0",
     "supertest": "^1.1.0"
   }
