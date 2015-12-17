@@ -5,7 +5,7 @@
   "main": "blog-app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lab -v -a code"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,9 @@
     "seneca-jsonrest-api": "~0.3.1",
     "seneca-perm": "^0.5.6",
     "seneca-user": "^0.2.10"
+  },
+  "devDependencies": {
+    "code": "^2.0.1",
+    "lab": "^8.0.0"
   }
 }
