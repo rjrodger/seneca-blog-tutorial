@@ -56,21 +56,40 @@ describe('Routes', function () {
       })
         .end(done)
     });
-  });
-
-  it('serve index explicitely', function (done) {
-    request(app).get('/index.html')
-      .expect(200)
-      .expect(function (res) {
-        expect(res.text).to.match(/Seneca Blog/);
-      })
-      .end(done)
-  });
 
 
-  it('404 when needed', function (done) {
-    request(app).get('/404')
-      .expect(404)
-      .end(done)
+    it('serve index explicitely', function (done) {
+      request(app).get('/index.html')
+        .expect(200)
+        .expect(function (res) {
+          expect(res.text).to.match(/Seneca Blog/);
+        })
+        .end(done)
+    });
+
+
+    it('404 when needed', function (done) {
+      request(app).get('/404')
+        .expect(404)
+        .end(done)
+    });
   });
+
+  describe('api', function () {
+
+    it('can access post', function (done) {
+      request(app).get('/api/posts')
+        .expect(200)
+        .end(done)
+    });
+
+    it('can access comments', function (done) {
+      request(app).get('/api/comments')
+        .expect(200)
+        .end(done)
+    });
+
+  });
+
+
 })
